@@ -1,20 +1,147 @@
 html {
+    font-family: "Rubik", sans-serif;
+    max-width: 80%;
     margin: auto;
+    background-image: linear-gradient(221deg,
+            hsl(0deg 0% 0%) 0%,
+            hsl(0deg 0% 0%) 7%,
+            hsl(0deg 0% 0%) 14%,
+            hsl(0deg 0% 0%) 22%,
+            hsl(0deg 0% 0%) 28%,
+            hsl(0deg 0% 0%) 35%,
+            hsl(0deg 0% 0%) 41%,
+            hsl(0deg 11% 10%) 48%,
+            hsl(0deg 11% 14%) 53%,
+            hsl(0deg 11% 18%) 59%,
+            hsl(0deg 11% 20%) 63%,
+            hsl(0deg 11% 23%) 68%,
+            hsl(0deg 11% 25%) 72%,
+            hsl(13deg 8% 34%) 76%,
+            hsl(20deg 7% 41%) 79%,
+            hsl(25deg 6% 47%) 82%,
+            hsl(29deg 6% 53%) 85%,
+            hsl(32deg 7% 57%) 88%,
+            hsl(34deg 8% 62%) 90%,
+            hsl(41deg 13% 67%) 92%,
+            hsl(45deg 19% 73%) 94%,
+            hsl(47deg 27% 77%) 96%,
+            hsl(48deg 38% 82%) 97%,
+            hsl(49deg 55% 86%) 99%,
+            hsl(50deg 84% 90%) 100%);
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #171717;
+    padding: 10px 0;
+    width: 100%;
+}
+
+header a {
+    font-size: 1.5rem;
+    margin: 0 20px;
+    text-decoration: none;
+    color: inherit;
 }
 
 
 main {
     display: flex;
     justify-content: center;
+    width: 100%;
 }
+
 
 #resources {
-    background-color: bisque;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    background-color: rgb(255, 244, 231);
+    padding: 20px;
 }
 
+
+@media (max-width: 1200px) {
+    #resources {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
 .card {
-    background-color: blue;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    background-image: linear-gradient(146deg,
+            hsl(270deg 100% 7%) 1%,
+            hsl(216deg 4% 25%) 36%,
+            hsl(151deg 3% 34%) 44%,
+            hsl(127deg 3% 42%) 48%,
+            hsl(118deg 4% 48%) 50%,
+            hsl(113deg 5% 54%) 51%,
+            hsl(110deg 6% 59%) 51%,
+            hsl(109deg 8% 63%) 51%,
+            hsl(107deg 10% 67%) 50%,
+            hsl(107deg 12% 71%) 49%,
+            hsl(106deg 15% 75%) 49%,
+            hsl(105deg 19% 79%) 49%,
+            hsl(105deg 24% 82%) 50%,
+            hsl(105deg 31% 86%) 52%,
+            hsl(104deg 42% 89%) 56%,
+            hsl(104deg 61% 92%) 64%,
+            hsl(104deg 100% 95%) 99%);
+}
+
+.card img {
+    width: 20dvw;
+    height: 20dvw;
+
+    object-fit: contain;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 1px 50px rgb(0, 0, 0));
+}
+
+.card a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.card-content {
+    background-color: #171717;
+    padding: 20px;
+    border-radius: 10px;
+    color: whitesmoke;
+}
+
+.card-title {
+    margin-bottom: 20px;
+}
+
+
+
+
+#target img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s;
+
+}
+
+#target img:hover {
+    transform: scale(1.2);
+
+}
+
+#target img {
+    width: 30px;
+    height: 30px;
 }
