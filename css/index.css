@@ -1,0 +1,20 @@
+html {
+    margin: auto;
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+#resources {
+    background-color: bisque;
+}
+
+.card {
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
