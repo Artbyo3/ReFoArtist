@@ -3,10 +3,11 @@
 
 <head>
     <link rel="stylesheet" href="./css/index.css">
+    <script src="./core.js"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ReFoArtist</title>
-
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,18 +35,24 @@
 
     </header>
 
-
+    <aside>
+        <section id="filters">
+            <button onclick="filterCards('all')">All</button>
+            <button onclick="filterCards('practice')">Practice</button>
+            <button onclick="filterCards('reference')">Reference</button>
+            <button onclick="filterCards('search')">Search</button>
+        </section>
+    </aside>
 
     <main>
 
         <section id="resources">
 
 
-
-            <article class="card">
+            <article class="card" data-category="practice">
                 <a href="https://quickposes.com/en">
 
-                    <img src="./images/qp-logo.svg" alt="Image of Resources">
+                    <img src="./images/quickposes-logo.svg" alt="quickposes logo">
                     <div class="card-content">
                         <h2 class="card-title">Quickposes</h2>
 
@@ -60,8 +67,8 @@
                     </div>
                 </a>
             </article>
-
-            <article class="card">
+            <!--------------------------------------------------------------------->
+            <article class="card" data-category="practice">
                 <a href="https://www.rkgk.org">
 
                     <img src="./images/omote.png" alt="Image of Resources">
@@ -79,14 +86,12 @@
                     </div>
                 </a>
             </article>
-
-            <article class="card">
+            <!--------------------------------------------------------------------->
+            <article class="card" data-category="search">
                 <a href="https://saucenao.com">
-
                     <img src="./images/snao.gif" alt="Image of Resources">
                     <div class="card-content">
                         <h2 class="card-title">SauceNAO</h2>
-
                         <a id="target" href="https://saucenao.com" target="_blank">
                             <img src="./images/target.svg" alt=" image open In new Window" class="target-icon">
                         </a>
@@ -97,83 +102,69 @@
                     </div>
                 </a>
             </article>
-
-            <article class="card">
+            <!--------------------------------------------------------------------->
+            <article class="card" data-category="practice">
                 <a href="https://line-of-action.com">
-
                     <img src="./images/loa-logo.png" alt="Image of Resources">
                     <div class="card-content">
                         <h2 class="card-title">Line of Action</h2>
-
                         <a id="target" href="https://line-of-action.com" target="_blank">
                             <img src="./images/target.svg" alt=" image open In new Window" class="target-icon">
                         </a>
-
-                        <p class="card-description"> card Resources card-description
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem corporis natus itaque a
-                            delectus! Error cumque dicta nobis quos animi culpa repellendus ad, omnis fugiat deleniti
-                            quod
-                            impedit libero quisquam!
+                        <p class="card-description"> a website designed to help artists improve their drawing skills
+                            through practice sessions with timed references. It offers a variety of drawing tools and
+                            resources, including figure drawing, animal drawing, and facial expression references,
+                            enabling artists to hone their technique and build a solid foundation in anatomy and gesture
+                            drawing.
                         </p>
                     </div>
                 </a>
             </article>
-
-
-            <article class="card">
+            <!--------------------------------------------------------------------->
+            <article class="card" data-category="practice">
                 <a href="https://www.adorkastock.com/sketch/">
-
-                    <img src="./images/1.png" alt="Image of Resources">
+                    <img src="./images/AdorkaStock-logo.png" alt="AdorkaStock-logo">
                     <div class="card-content">
-                        <h2 class="card-title">Name</h2>
-
+                        <h2 class="card-title">AdorkaStock Sketch</h2>
                         <a id="target" href="#" target="_blank">
                             <img src="./images/target.svg" alt=" image open In new Window" class="target-icon">
                         </a>
-
-                        <p class="card-description"> card Resources card-description
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem corporis natus itaque a
-                            delectus! Error cumque dicta nobis quos animi culpa repellendus ad, omnis fugiat deleniti
-                            quod
-                            impedit libero quisquam!
+                        <p class="card-description"> versatile online resource designed for artists
+                            looking to improve their drawing skills, particularly in dynamic poses and figure drawing.
+                            The website offers an extensive library of high-quality reference images featuring a variety
+                            of poses, angles, and lighting conditions.
                         </p>
                     </div>
                 </a>
             </article>
-
-            <article class="card">
+            <!--------------------------------------------------------------------->
+            <article class="card" data-category="practice">
                 <a href="https://www.posemaniacs.com">
 
-                    <img src="./images/1.png" alt="Image of Resources">
+                    <img src="./images/posemaniacs logo.png" alt="Image of Resources">
                     <div class="card-content">
-                        <h2 class="card-title">Name</h2>
+                        <h2 class="card-title">Posemaniacs</h2>
 
-                        <a id="target" href="#" target="_blank">
+                        <a id="target" href="https://www.posemaniacs.com" target="_blank">
                             <img src="./images/target.svg" alt=" image open In new Window" class="target-icon">
                         </a>
-
-                        <p class="card-description"> card Resources card-description
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem corporis natus itaque a
-                            delectus! Error cumque dicta nobis quos animi culpa repellendus ad, omnis fugiat deleniti
-                            quod
-                            impedit libero quisquam!
+                        <p class="card-description"> website that provides a collection of 3D models
+                            in various poses, designed to assist artists in studying anatomy and practicing figure
+                            drawing.
                         </p>
                     </div>
                 </a>
             </article>
-
-            <article class="card">
-                <a href="#">
-
-                    <img src="./images/1.png" alt="Image of Resources">
+            <!--------------------------------------------------------------------->
+            <article class="card" data-category="search">
+                <a href="https://imgops.com">
+                    <img src="./images/imgops logo.jpg" alt="Imgops logo">
                     <div class="card-content">
-                        <h2 class="card-title">Name</h2>
-
-                        <a id="target" href="#" target="_blank">
+                        <h2 class="card-title">ImgOps</h2>
+                        <a id="target" href="https://imgops.com" target="_blank">
                             <img src="./images/target.svg" alt=" image open In new Window" class="target-icon">
                         </a>
-
-                        <p class="card-description"> card Resources card-description
+                        <p class="card-description" style="color: red;"> card Resources card-description
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem corporis natus itaque a
                             delectus! Error cumque dicta nobis quos animi culpa repellendus ad, omnis fugiat deleniti
                             quod
@@ -182,14 +173,47 @@
                     </div>
                 </a>
             </article>
-
+            <!--------------------------------------------------------------------->
+            <article class="card" data-category="reference">
+                <a href="https://unsplash.com">
+                    <img src="./images/Unsplash logo.png" alt="Unsplash logo">
+                    <div class="card-content">
+                        <h2 class="card-title">Unsplash</h2>
+                        <a id="target" href="https://imgops.com" target="_blank">
+                            <img src="./images/target.svg" alt=" image open In new Window" class="target-icon">
+                        </a>
+                        <p class="card-description" style="color: red;"> card Resources card-description
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem corporis natus itaque a
+                            delectus! Error cumque dicta nobis quos animi culpa repellendus ad, omnis fugiat deleniti
+                            quod
+                            impedit libero quisquam!
+                        </p>
+                    </div>
+                </a>
+            </article>
+            <!--------------------------------------------------------------------->
+            <article class="card">
+                <a href="#">
+                    <img src="./images/1.png" alt="Image of Resources">
+                    <div class="card-content">
+                        <h2 class="card-title">Name</h2>
+                        <p class="card-description" style="color: red;"> card Resources card-description
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem corporis natus itaque a
+                            delectus! Error cumque dicta nobis quos animi culpa repellendus ad, omnis fugiat deleniti
+                            quod
+                            impedit libero quisquam!
+                        </p>
+                    </div>
+                </a>
+            </article>
+            <!--------------------------------------------------------------------->
             <article class="card">
                 <a href="#">
 
                     <img src="./images/1.png" alt="Image of Resources">
                     <div class="card-content">
                         <h2 class="card-title">Name</h2>
-                        <p class="card-description"> card Resources card-description
+                        <p class="card-description" style="color: red;"> card Resources card-description
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem corporis natus itaque a
                             delectus! Error cumque dicta nobis quos animi culpa repellendus ad, omnis fugiat deleniti
                             quod
@@ -198,14 +222,14 @@
                     </div>
                 </a>
             </article>
-
+            <!--------------------------------------------------------------------->
             <article class="card">
                 <a href="#">
 
                     <img src="./images/1.png" alt="Image of Resources">
                     <div class="card-content">
                         <h2 class="card-title">Name</h2>
-                        <p class="card-description"> card Resources card-description
+                        <p class="card-description" style="color: red;"> card Resources card-description
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem corporis natus itaque a
                             delectus! Error cumque dicta nobis quos animi culpa repellendus ad, omnis fugiat deleniti
                             quod
@@ -214,14 +238,14 @@
                     </div>
                 </a>
             </article>
-
+            <!--------------------------------------------------------------------->
             <article class="card">
                 <a href="#">
 
                     <img src="./images/1.png" alt="Image of Resources">
                     <div class="card-content">
                         <h2 class="card-title">Name</h2>
-                        <p class="card-description"> card Resources card-description
+                        <p class="card-description" style="color: red;"> card Resources card-description
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem corporis natus itaque a
                             delectus! Error cumque dicta nobis quos animi culpa repellendus ad, omnis fugiat deleniti
                             quod
@@ -231,37 +255,11 @@
                 </a>
             </article>
 
-            <article class="card">
-                <a href="#">
 
-                    <img src="./images/1.png" alt="Image of Resources">
-                    <div class="card-content">
-                        <h2 class="card-title">Name</h2>
-                        <p class="card-description"> card Resources card-description
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem corporis natus itaque a
-                            delectus! Error cumque dicta nobis quos animi culpa repellendus ad, omnis fugiat deleniti
-                            quod
-                            impedit libero quisquam!
-                        </p>
-                    </div>
-                </a>
-            </article>
 
-            <article class="card">
-                <a href="#">
 
-                    <img src="./images/1.png" alt="Image of Resources">
-                    <div class="card-content">
-                        <h2 class="card-title">Name</h2>
-                        <p class="card-description"> card Resources card-description
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem corporis natus itaque a
-                            delectus! Error cumque dicta nobis quos animi culpa repellendus ad, omnis fugiat deleniti
-                            quod
-                            impedit libero quisquam!
-                        </p>
-                    </div>
-                </a>
-            </article>
+
+
 
         </section>
 

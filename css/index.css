@@ -28,7 +28,16 @@ html {
             hsl(48deg 38% 82%) 97%,
             hsl(49deg 55% 86%) 99%,
             hsl(50deg 84% 90%) 100%);
+    background-repeat: round;
+
+
 }
+
+
+#filters button {
+    padding: 10px;
+}
+
 
 header {
     display: flex;
@@ -37,6 +46,10 @@ header {
     background-color: #171717;
     padding: 10px 0;
     width: 100%;
+    color: whitesmoke;
+
+
+
 }
 
 header a {
@@ -44,7 +57,14 @@ header a {
     margin: 0 20px;
     text-decoration: none;
     color: inherit;
+
 }
+
+
+header a:hover {
+    text-decoration: underline;
+}
+
 
 
 main {
@@ -98,6 +118,9 @@ main {
             hsl(104deg 42% 89%) 56%,
             hsl(104deg 61% 92%) 64%,
             hsl(104deg 100% 95%) 99%);
+
+
+
 }
 
 .card img {
