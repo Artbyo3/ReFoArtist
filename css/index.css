@@ -1,7 +1,5 @@
 html {
     font-family: "Rubik", sans-serif;
-    max-width: 80%;
-    margin: auto;
     background-image: linear-gradient(221deg,
             hsl(0deg 0% 0%) 0%,
             hsl(0deg 0% 0%) 7%,
@@ -30,76 +28,93 @@ html {
             hsl(50deg 84% 90%) 100%);
     background-repeat: round;
 
-
 }
-
 
 #filters button {
+
+    border-radius: 10px 10px 10px 0px;
     padding: 10px;
+    background-color: aqua;
 }
 
 
+#filters button:hover:hover {
+    border-radius: 0px 10px 10px 10px;
+    background-color: rgb(94, 105, 105);
+}
+
 header {
-    display: flex;
-    justify-content: flex-end;
+    margin: auto;
     align-items: center;
+    color: whitesmoke;
     background-color: #171717;
     padding: 10px 0;
     width: 100%;
-    color: whitesmoke;
-
-
-
+    padding: 1%;
 }
 
 header a {
-    font-size: 1.5rem;
-    margin: 0 20px;
     text-decoration: none;
     color: inherit;
-
+    font-size: 1.5rem;
+    margin: 0 20px;
 }
 
+body {
+    margin: auto;
+    max-width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
 
 header a:hover {
     text-decoration: underline;
 }
 
-
-
-main {
+main,
+aside {
     display: flex;
     justify-content: center;
-    width: 100%;
+    margin: inherit;
+    width: 80%;
 }
-
 
 #resources {
-
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
     background-color: rgb(255, 244, 231);
+    gap: 20px;
     padding: 20px;
+    border-radius: 30px;
 }
-
 
 @media (max-width: 1200px) {
     #resources {
         grid-template-columns: repeat(2, 1fr);
     }
+
 }
 
+@media (max-width: 700px) {
+    #resources {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
 
 .card {
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    text-align: center;
     border-radius: 20px;
     padding: 20px;
-    text-align: center;
     background-image: linear-gradient(146deg,
             hsl(270deg 100% 7%) 1%,
             hsl(216deg 4% 25%) 36%,
@@ -119,15 +134,13 @@ main {
             hsl(104deg 61% 92%) 64%,
             hsl(104deg 100% 95%) 99%);
 
-
-
 }
 
 .card img {
+    object-fit: contain;
     width: 20dvw;
     height: 20dvw;
-
-    object-fit: contain;
+    min-width: 20dvw;
     border-radius: 20px;
     margin-bottom: 20px;
     filter: drop-shadow(0 1px 50px rgb(0, 0, 0));
@@ -139,32 +152,27 @@ main {
 }
 
 .card-content {
+    color: whitesmoke;
     background-color: #171717;
     padding: 20px;
     border-radius: 10px;
-    color: whitesmoke;
 }
 
 .card-title {
     margin-bottom: 20px;
 }
 
-
-
-
 #target img {
     width: 50px;
     height: 50px;
     transition: transform 0.3s;
-
-}
-
-#target img:hover {
-    transform: scale(1.2);
-
 }
 
 #target img {
     width: 30px;
     height: 30px;
+}
+
+#target img:hover {
+    transform: scale(1.2);
 }
