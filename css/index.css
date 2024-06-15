@@ -27,14 +27,20 @@ html {
             hsl(49deg 55% 86%) 99%,
             hsl(50deg 84% 90%) 100%);
     background-repeat: round;
+    overflow-x: hidden;
 
+}
+
+#filters {
+    margin: 12px 12px 12px 0;
 }
 
 #filters button {
 
-    border-radius: 10px 10px 10px 0px;
+    border-radius: 10px;
     padding: 10px;
-    background-color: aqua;
+    background-color: #646464;
+    color: #F1F1F1;
 }
 
 
@@ -45,13 +51,14 @@ html {
 
 header {
     margin: auto;
+
     align-items: center;
     color: whitesmoke;
     background-color: #171717;
     padding: 10px 0;
     width: 100%;
-    padding: 1%;
 }
+
 
 header a {
     text-decoration: none;
